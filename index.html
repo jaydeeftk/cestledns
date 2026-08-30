@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C'est le DNS</title>
+<meta name="description" content="Excuses réseau, quiz des ports, traductions et pannes légendaires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="bar">
+  <span class="logo">c'est le DNS</span>
+  <nav>
+    <a href="#quiz">Quiz</a>
+    <a href="#traduction">Traduction</a>
+    <a href="#pannes">Pannes</a>
+  </nav>
+</header>
+
+<main id="contenu">
+
+  <section class="hero">
+    <p class="kicker">le réseau est tombé</p>
+    <h1>Trouvez un coupable en une seconde.</h1>
+
+    <div class="machine">
+      <p class="excuse" id="excuse">Appuyez sur le bouton, il y a forcément quelqu'un à blâmer.</p>
+      <button class="big" id="btn-excuse">Générer une excuse</button>
+      <p class="note" id="excuse-note"></p>
+    </div>
+
+    <div class="compteur" data-depuis="2026-08-24">
+      <span class="chiffre" id="jours">0</span>
+      <span class="chiffre-txt">jours sans que quelqu'un dise que c'est le DNS</span>
+      <button class="mini" id="btn-reset">Quelqu'un vient de le dire</button>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <h2>Quiz des ports</h2>
+    <p class="sous">Cinq questions, une seule réponse par question. Personne ne fait 5 sur 5 du premier coup.</p>
+
+    <div class="carte quiz-box">
+      <p class="quiz-compteur" id="quiz-compteur">Question 1 sur 5</p>
+      <h3 class="quiz-question" id="quiz-question">Chargement</h3>
+      <div class="quiz-choix" id="quiz-choix"></div>
+      <p class="quiz-verdict" id="quiz-verdict" role="status"></p>
+      <button class="mini" id="quiz-suivant" hidden>Question suivante</button>
+    </div>
+  </section>
+
+  <section class="section" id="traduction">
+    <h2>Petit traducteur</h2>
+    <p class="sous">Ce qu'on dit en réunion, et ce que ça veut vraiment dire.</p>
+
+    <dl class="traduc">
+      <div>
+        <dt>C'est un problème réseau.</dt>
+        <dd>Je n'ai pas encore ouvert les logs.</dd>
+      </div>
+      <div>
+        <dt>Ça marche sur ma machine.</dt>
+        <dd>Je n'ai testé nulle part ailleurs.</dd>
+      </div>
+      <div>
+        <dt>Je vais redémarrer le service.</dt>
+        <dd>Je n'ai aucune idée de ce qui se passe.</dd>
+      </div>
+      <div>
+        <dt>C'est une règle temporaire.</dt>
+        <dd>Elle sera encore là dans trois ans.</dd>
+      </div>
+      <div>
+        <dt>On sécurisera dans un deuxième temps.</dt>
+        <dd>Il n'y aura pas de deuxième temps.</dd>
+      </div>
+      <div>
+        <dt>J'ai ouvert le port juste pour tester.</dt>
+        <dd>Le port est ouvert depuis huit mois.</dd>
+      </div>
+      <div>
+        <dt>Le cloud est élastique.</dt>
+        <dd>La facture aussi.</dd>
+      </div>
+      <div>
+        <dt>C'est documenté.</dt>
+        <dd>Il y a un fichier vide quelque part.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="section" id="pannes">
+    <h2>Pannes légendaires</h2>
+    <p class="sous">Des histoires qui finissent toujours par arriver à quelqu'un.</p>
+
+    <ol class="pannes">
+      <li>
+        <span class="tag t1">réseau</span>
+        <h3>La bouilloire du deuxième étage</h3>
+        <p>Un switch débranché pour brancher une bouilloire. Deux heures de diagnostic passées sur le routage.</p>
+      </li>
+      <li>
+        <span class="tag t2">réseau</span>
+        <h3>Les deux serveurs DHCP</h3>
+        <p>Quelqu'un monte son propre DHCP pour tester. La moitié de la salle reçoit des baux venus d'ailleurs.</p>
+      </li>
+      <li>
+        <span class="tag t3">sécurité</span>
+        <h3>Le certificat de 4h12</h3>
+        <p>Expiré pendant la nuit. Le site reste rouge jusqu'à ce que quelqu'un lise vraiment le message d'erreur.</p>
+      </li>
+      <li>
+        <span class="tag t4">réseau</span>
+        <h3>La boucle du vendredi</h3>
+        <p>Deux ports reliés entre eux sur le même switch. Spanning-tree tient, les nerfs non.</p>
+      </li>
+      <li>
+        <span class="tag t1">cloud</span>
+        <h3>La facture du week-end</h3>
+        <p>Un cluster de test lancé le vendredi soir, oublié jusqu'au lundi. Le compteur, lui, a très bien travaillé.</p>
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Fait entre deux TP, salle B204.</p>
+  <p>En cas de doute, ping 8.8.8.8.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
