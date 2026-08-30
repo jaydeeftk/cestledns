@@ -82,6 +82,12 @@ const questions = [
     choix: ["4", "6", "8"],
     bon: 1,
     mot: "8 adresses au total, moins le réseau et le broadcast."
+  },
+  {
+    texte: "Quel port utilise DNS ?",
+    choix: ["53", "67", "123"],
+    bon: 0,
+    mot: "Le 67 c'est DHCP, le 123 c'est NTP."
   }
 ];
 
